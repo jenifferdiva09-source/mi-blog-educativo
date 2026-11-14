@@ -102,7 +102,7 @@ class StorageService {
           coverImage: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
           coverAlt: 'Esquema y paisaje del ciclo hidrológico en la naturaleza',
           author: 'Licda. Nancy Matos',
-          role: 'Especialista en Didáctica',
+          role: 'Docente de Tecnología Digital',
           views: 2450,
           createdAt: new Date('2025-03-14T08:30:00Z').getTime(),
           content: `
@@ -279,7 +279,7 @@ class StorageService {
           coverImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
           coverAlt: 'Paisaje de manglar rojo costero',
           author: 'Licda. Nancy Matos',
-          role: 'Especialista en Didáctica',
+          role: 'Docente de Tecnología Digital',
           views: 0,
           createdAt: new Date('2025-03-15T09:00:00Z').getTime(),
           content: `
@@ -381,6 +381,21 @@ class StorageService {
       }
 
     }
+
+    // Migración: autoría de artículos de ejemplo
+    try {
+      const arts = await new Promise((res) => {
+        const r = this.db.transaction('articles', 'readonly').objectStore('articles').getAll();
+        r.onsuccess = () => res(r.result || []); r.onerror = () => res([]);
+      });
+      for (const a of arts) {
+        if (a.author === 'Lic. Ramona Almonte') {
+          a.author = 'Licda. Nancy Matos';
+          a.role = 'Docente de Tecnología Digital';
+          await this._putRaw('articles', a);
+        }
+      }
+    } catch (e) { /* sin cambios */ }
 
     // Sembrar perfil docente por defecto (editable desde perfil.html)
     // Migración: reemplaza el perfil de ejemplo anterior si nunca fue editado
