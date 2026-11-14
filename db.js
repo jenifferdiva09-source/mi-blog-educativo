@@ -276,8 +276,8 @@ class StorageService {
           grade: '5to Primaria',
           readTime: 8,
           status: 'published',
-          coverImage: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80',
-          coverAlt: 'Mapa antiguo con brújula sobre una mesa de madera',
+          coverImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAXJp_0VqUQgNOnlXlqb3X4ukXlJBd4EO1bgbvYhUKuNdPghshpdbMQTtUQ3j1rwZsRFz4Gueha8wTWICkffQXpCL39oPE7aaI2sGtEQd3YcXx8wRLkt-m_IAcP98Ai_zgNBMCpsx9-I9ixRkoIoFQIXdpYXHgIgsI8xGK7CzYyaqZ7quVNDABqY_VqkyAXf42PoxCNe_7cEuwNT2IargsPFuK26WSYq_CE7Nc0LjGQrCEgQv411qI',
+          coverAlt: 'Fachada colonial dominicana iluminada por el sol de la mañana',
           author: 'Lic. Rafael Rosario',
           role: 'Docente de Ciencias Sociales',
           views: 1260,
@@ -464,6 +464,17 @@ class StorageService {
         const r = this.db.transaction('articles', 'readonly').objectStore('articles').get('art-historia-siglo-xix');
         r.onsuccess = () => res(!!r.result); r.onerror = () => res(true);
       });
+      if (has) {
+        const cur = await new Promise((res) => {
+          const r = this.db.transaction('articles', 'readonly').objectStore('articles').get('art-historia-siglo-xix');
+          r.onsuccess = () => res(r.result); r.onerror = () => res(null);
+        });
+        if (cur && cur.coverImage && cur.coverImage.includes('unsplash')) {
+          cur.coverImage = 'https://lh3.googleusercontent.com/aida-public/AB6AXuAXJp_0VqUQgNOnlXlqb3X4ukXlJBd4EO1bgbvYhUKuNdPghshpdbMQTtUQ3j1rwZsRFz4Gueha8wTWICkffQXpCL39oPE7aaI2sGtEQd3YcXx8wRLkt-m_IAcP98Ai_zgNBMCpsx9-I9ixRkoIoFQIXdpYXHgIgsI8xGK7CzYyaqZ7quVNDABqY_VqkyAXf42PoxCNe_7cEuwNT2IargsPFuK26WSYq_CE7Nc0LjGQrCEgQv411qI';
+          cur.coverAlt = 'Fachada colonial dominicana iluminada por el sol de la mañana';
+          await this._putRaw('articles', cur);
+        }
+      }
       if (!has) {
         const SOC = [
         {
@@ -474,8 +485,8 @@ class StorageService {
           grade: '5to Primaria',
           readTime: 8,
           status: 'published',
-          coverImage: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80',
-          coverAlt: 'Mapa antiguo con brújula sobre una mesa de madera',
+          coverImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAXJp_0VqUQgNOnlXlqb3X4ukXlJBd4EO1bgbvYhUKuNdPghshpdbMQTtUQ3j1rwZsRFz4Gueha8wTWICkffQXpCL39oPE7aaI2sGtEQd3YcXx8wRLkt-m_IAcP98Ai_zgNBMCpsx9-I9ixRkoIoFQIXdpYXHgIgsI8xGK7CzYyaqZ7quVNDABqY_VqkyAXf42PoxCNe_7cEuwNT2IargsPFuK26WSYq_CE7Nc0LjGQrCEgQv411qI',
+          coverAlt: 'Fachada colonial dominicana iluminada por el sol de la mañana',
           author: 'Lic. Rafael Rosario',
           role: 'Docente de Ciencias Sociales',
           views: 1260,

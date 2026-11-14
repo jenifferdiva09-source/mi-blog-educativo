@@ -638,8 +638,8 @@
       if (breadcrumb) breadcrumb.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span> ${escapeHTML(art.subject || '')} · ${escapeHTML(art.grade || '')}`;
 
       // Title
-      const h1 = document.querySelector('h1');
-      if (h1) h1.textContent = art.title;
+      document.querySelectorAll('h1').forEach(h => { h.textContent = art.title; });
+      document.title = 'Aula Abierta — ' + art.title;
 
       // Summary
       const summary = document.querySelector('article p.italic');
