@@ -101,7 +101,7 @@ class StorageService {
           status: 'published', // 'published', 'draft', 'scheduled'
           coverImage: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
           coverAlt: 'Esquema y paisaje del ciclo hidrológico en la naturaleza',
-          author: 'Lic. Ramona Almonte',
+          author: 'Licda. Nancy Matos',
           role: 'Especialista en Didáctica',
           views: 2450,
           createdAt: new Date('2025-03-14T08:30:00Z').getTime(),
@@ -278,7 +278,7 @@ class StorageService {
           status: 'draft',
           coverImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
           coverAlt: 'Paisaje de manglar rojo costero',
-          author: 'Lic. Ramona Almonte',
+          author: 'Licda. Nancy Matos',
           role: 'Especialista en Didáctica',
           views: 0,
           createdAt: new Date('2025-03-15T09:00:00Z').getTime(),
@@ -381,16 +381,29 @@ class StorageService {
       }
 
       // Sembrar perfil docente por defecto (editable desde perfil.html)
+      // Migración: reemplaza el perfil de ejemplo anterior si nunca fue editado
+      try {
+        const prev = await new Promise((res) => {
+          const r = this.db.transaction('settings', 'readonly').objectStore('settings').get('teacherProfile');
+          r.onsuccess = () => res(r.result); r.onerror = () => res(null);
+        });
+        if (prev && prev.name === 'Lic. Ramona Almonte') {
+          await new Promise((res) => {
+            const r = this.db.transaction('settings', 'readwrite').objectStore('settings').delete('teacherProfile');
+            r.onsuccess = () => res(); r.onerror = () => res();
+          });
+        }
+      } catch (e) { /* sin cambios */ }
       const settingsCount = await this._countRaw('settings');
       if (settingsCount === 0) {
         await this._putRaw('settings', {
           key: 'teacherProfile',
-          name: 'Lic. Ramona Almonte',
-          title: 'Lic.',
-          role: 'Especialista en Didáctica',
-          specialty: 'Educación Primaria • Mención Ciencias',
-          school: 'Distrito Educativo 10-01',
-          yearsExperience: 14,
+          name: 'Nancy Matos',
+          title: 'Licda.',
+          role: 'Docente de Tecnología Digital',
+          specialty: 'Lic. en Educación, mención Informática • Tecnología Digital, 5to de Secundaria',
+          school: 'Politécnico Fray Barbino',
+          yearsExperience: 0,
           bio: 'Educar con ternura y firmeza es encender una antorcha que nunca dejará de alumbrar el porvenir de nuestra patria.',
           photoUrl: '',
           updatedAt: Date.now()
