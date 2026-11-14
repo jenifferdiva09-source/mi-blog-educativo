@@ -380,35 +380,39 @@ class StorageService {
         await this._putRaw('media', med);
       }
 
-      // Sembrar perfil docente por defecto (editable desde perfil.html)
-      // Migración: reemplaza el perfil de ejemplo anterior si nunca fue editado
-      try {
-        const prev = await new Promise((res) => {
-          const r = this.db.transaction('settings', 'readonly').objectStore('settings').get('teacherProfile');
-          r.onsuccess = () => res(r.result); r.onerror = () => res(null);
-        });
-        if (prev && prev.name === 'Lic. Ramona Almonte') {
-          await new Promise((res) => {
-            const r = this.db.transaction('settings', 'readwrite').objectStore('settings').delete('teacherProfile');
-            r.onsuccess = () => res(); r.onerror = () => res();
-          });
-        }
-      } catch (e) { /* sin cambios */ }
-      const settingsCount = await this._countRaw('settings');
-      if (settingsCount === 0) {
-        await this._putRaw('settings', {
-          key: 'teacherProfile',
-          name: 'Nancy Matos',
-          title: 'Licda.',
-          role: 'Docente de Tecnología Digital',
-          specialty: 'Lic. en Educación, mención Informática • Tecnología Digital, 5to de Secundaria',
-          school: 'Politécnico Fray Barbino',
-          yearsExperience: 0,
-          bio: 'Educar con ternura y firmeza es encender una antorcha que nunca dejará de alumbrar el porvenir de nuestra patria.',
-          photoUrl: '',
-          updatedAt: Date.now()
+    }
+
+    // Sembrar perfil docente por defecto (editable desde perfil.html)
+    // Migración: reemplaza el perfil de ejemplo anterior si nunca fue editado
+    try {
+      const prev = await new Promise((res) => {
+        const r = this.db.transaction('settings', 'readonly').objectStore('settings').get('teacherProfile');
+        r.onsuccess = () => res(r.result); r.onerror = () => res(null);
+      });
+      if (prev && prev.name === 'Lic. Ramona Almonte') {
+        await new Promise((res) => {
+          const r = this.db.transaction('settings', 'readwrite').objectStore('settings').delete('teacherProfile');
+          r.onsuccess = () => res(); r.onerror = () => res();
         });
       }
+    } catch (e) { /* sin cambios */ }
+    const current = await new Promise((res) => {
+      const r = this.db.transaction('settings', 'readonly').objectStore('settings').get('teacherProfile');
+      r.onsuccess = () => res(r.result); r.onerror = () => res(null);
+    });
+    if (!current) {
+      await this._putRaw('settings', {
+        key: 'teacherProfile',
+        name: 'Nancy Matos',
+        title: 'Licda.',
+        role: 'Docente de Tecnología Digital',
+        specialty: 'Lic. en Educación, mención Informática • Tecnología Digital, 5to de Secundaria',
+        school: 'Politécnico Fray Barbino',
+        yearsExperience: 0,
+        bio: 'Educar con ternura y firmeza es encender una antorcha que nunca dejará de alumbrar el porvenir de nuestra patria.',
+        photoUrl: '',
+        updatedAt: Date.now()
+      });
     }
   }
 
