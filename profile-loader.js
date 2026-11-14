@@ -23,7 +23,7 @@
   'use strict';
 
   // Avatar genérico por defecto — el docente lo reemplaza desde perfil.html
-  const DEFAULT_PHOTO = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><rect width="120" height="120" fill="%231565C0" rx="60"/><text x="60" y="72" text-anchor="middle" font-size="48" font-family="sans-serif" fill="white">👩‍🏫</text></svg>');
+  const DEFAULT_PHOTO = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><rect width="120" height="120" fill="%236750A4" rx="60"/><text x="60" y="72" text-anchor="middle" font-size="48" font-family="sans-serif" fill="white">👩‍🏫</text></svg>');
 
   let cachedProfile = null;
 
@@ -41,11 +41,11 @@
   }
 
   function firstName(fullName) {
-    // Extract first name after title: "Licda. Nancy Matos" → "Nancy"
+    // Extract first name after title: "Lic. Ramona Almonte" → "Ramona"
     const parts = fullName.trim().split(/\s+/);
     if (parts.length <= 1) return fullName;
     // Skip title-like prefixes
-    const titles = ['lic.','licda.','mtr.','mtra.','dr.','dra.','ing.','prof.','tec.'];
+    const titles = ['lic.','mtr.','mtra.','dr.','dra.','ing.','prof.','tec.'];
     let start = 0;
     if (titles.includes(parts[0].toLowerCase())) start = 1;
     return parts[start] || fullName;

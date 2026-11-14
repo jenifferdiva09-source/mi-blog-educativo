@@ -101,8 +101,8 @@ class StorageService {
           status: 'published', // 'published', 'draft', 'scheduled'
           coverImage: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
           coverAlt: 'Esquema y paisaje del ciclo hidrológico en la naturaleza',
-          author: 'Licda. Nancy Matos',
-          role: 'Docente de Tecnología Digital',
+          author: 'Lic. Ramona Almonte',
+          role: 'Especialista en Didáctica',
           views: 2450,
           createdAt: new Date('2025-03-14T08:30:00Z').getTime(),
           content: `
@@ -269,82 +269,6 @@ class StorageService {
           tags: ['LenguaEspañola', 'RedacciónInicial', 'Gramática']
         },
         {
-          id: 'art-historia-siglo-xix',
-          title: 'Explorando la historia dominicana en el siglo XIX: de la Independencia a la Restauración',
-          summary: 'Una línea de tiempo viva para comprender cómo nació y se defendió la República Dominicana entre 1844 y 1865.',
-          subject: 'Ciencias Sociales',
-          grade: '5to Primaria',
-          readTime: 8,
-          status: 'published',
-          coverImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAXJp_0VqUQgNOnlXlqb3X4ukXlJBd4EO1bgbvYhUKuNdPghshpdbMQTtUQ3j1rwZsRFz4Gueha8wTWICkffQXpCL39oPE7aaI2sGtEQd3YcXx8wRLkt-m_IAcP98Ai_zgNBMCpsx9-I9ixRkoIoFQIXdpYXHgIgsI8xGK7CzYyaqZ7quVNDABqY_VqkyAXf42PoxCNe_7cEuwNT2IargsPFuK26WSYq_CE7Nc0LjGQrCEgQv411qI',
-          coverAlt: 'Fachada colonial dominicana iluminada por el sol de la mañana',
-          author: 'Lic. Rafael Rosario',
-          role: 'Docente de Ciencias Sociales',
-          views: 1260,
-          createdAt: new Date('2025-03-12T09:00:00Z').getTime(),
-          content: `
-            <div style="background:linear-gradient(135deg,#fef3c7,#fff7ed);padding:20px 24px;border-radius:12px;margin-bottom:24px;border-left:4px solid #d97706;">
-              <p style="margin:0 0 8px;font-weight:700;color:#92400e;">📋 Ficha Curricular — Alineada al Currículo MINERD</p>
-              <p style="margin:4px 0;"><strong>Competencia fundamental:</strong> Ética y Ciudadana</p>
-              <p style="margin:4px 0;"><strong>Eje temático:</strong> Historia dominicana — Formación del Estado nacional</p>
-              <p style="margin:4px 0;"><strong>Indicador de logro:</strong> Ordena en una línea de tiempo los hechos principales de la Independencia y la Restauración, y explica su importancia para la identidad nacional.</p>
-              <p style="margin:4px 0;"><strong>Grado:</strong> 5to Primaria &nbsp;|&nbsp; <strong>Duración:</strong> 3 sesiones de 45 min</p>
-            </div>
-
-            <h2>1. ¿Por qué celebramos el 27 de febrero?</h2>
-            <p>Cada 27 de febrero las escuelas de todo el país se llenan de banderas, desfiles y actos patrios. Pero, ¿qué ocurrió realmente aquella noche de 1844 en la Puerta del Conde? Comprender el siglo XIX es entender cómo un pueblo decidió ser libre y cómo defendió esa libertad más de una vez.</p>
-            <p>Para nuestros estudiantes, la historia no debe ser una lista de fechas para memorizar, sino una historia de personas, ideas y decisiones que todavía hoy dan forma a nuestra ciudadanía.</p>
-
-            <blockquote style="border-left:4px solid #d97706;padding:16px 20px;background:#fffbeb;border-radius:0 8px 8px 0;margin:24px 0;">
-              <p style="font-style:italic;margin:0 0 8px;">«Conocer de dónde venimos nos ayuda a decidir hacia dónde queremos ir como nación.»</p>
-              <cite style="color:#64748b;">— Principio de la enseñanza de la Historia</cite>
-            </blockquote>
-
-            <h2>2. Línea de tiempo: los hechos clave</h2>
-            <ol>
-              <li><strong>1838 — La Trinitaria:</strong> Juan Pablo Duarte funda una sociedad secreta para organizar la lucha por una nación libre e independiente.</li>
-              <li><strong>27 de febrero de 1844 — Independencia:</strong> En la Puerta del Conde, Francisco del Rosario Sánchez proclama la República y Matías Ramón Mella dispara el trabucazo. Nace la República Dominicana.</li>
-              <li><strong>6 de noviembre de 1844 — Primera Constitución:</strong> Se firma en San Cristóbal la primera Carta Magna del país.</li>
-              <li><strong>1861 — Anexión a España:</strong> El gobierno de Pedro Santana entrega la soberanía del país a la Corona española.</li>
-              <li><strong>16 de agosto de 1863 — Grito de Capotillo:</strong> Comienza la Guerra de la Restauración para recuperar la independencia.</li>
-              <li><strong>1865 — Restauración de la República:</strong> Las tropas españolas abandonan el país y la soberanía queda restablecida.</li>
-            </ol>
-
-            <div style="background:#eff6ff;padding:16px 20px;border-radius:10px;margin:24px 0;border:1px solid #bfdbfe;">
-              <h4 style="margin:0 0 8px;color:#1e3a8a;">🇩🇴 ¿Sabías que...?</h4>
-              <p style="margin:0;">Duarte, Sánchez y Mella son reconocidos como los <em>Padres de la Patria</em>. Sus restos descansan juntos en el Altar de la Patria, en el Parque Independencia de Santo Domingo.</p>
-            </div>
-
-            <h2>3. Secuencia Didáctica: La Línea de Tiempo Humana</h2>
-            <p>En esta actividad los estudiantes se convierten en los protagonistas de la historia y ordenan los hechos con su propio cuerpo.</p>
-
-            <div style="background:#fff;padding:20px;border-radius:10px;border:1px solid #e2e8f0;margin:16px 0;">
-              <h4 style="color:#1e40af;margin-top:0;">🗂️ Materiales (para todo el grupo)</h4>
-              <ul>
-                <li>6 cartulinas, cada una con un hecho y su fecha</li>
-                <li>Un cordel largo y pinzas de ropa</li>
-                <li>Marcadores de colores</li>
-                <li>Imágenes impresas de los Padres de la Patria y de la Puerta del Conde</li>
-              </ul>
-              <h4 style="color:#1e40af;">👣 Pasos</h4>
-              <ol>
-                <li>Reparta las cartulinas desordenadas entre seis equipos.</li>
-                <li>Cada equipo lee su hecho y explica en una frase por qué fue importante.</li>
-                <li>Entre todos, ordenan las cartulinas en el cordel de la más antigua a la más reciente.</li>
-                <li>Cierre con la pregunta: <em>¿Qué hubiera pasado si la Restauración no hubiera triunfado?</em></li>
-              </ol>
-            </div>
-
-            <h2>4. Evaluación y reflexión</h2>
-            <ul>
-              <li>¿Qué hecho de la línea de tiempo te pareció más valiente? ¿Por qué?</li>
-              <li>Escribe tres valores que compartían Duarte, Sánchez y Mella.</li>
-              <li>¿Cómo podemos honrar hoy a la patria desde nuestra escuela y comunidad?</li>
-            </ul>
-          `,
-          tags: ['CienciasSociales', 'HistoriaDominicana', 'MINERD', 'Independencia']
-        },
-        {
           id: 'art-manglares-borrador',
           title: 'Ecosistemas Costeros y Manglares de Samaná',
           summary: 'Una secuencia reflexiva y multidisciplinar diseñada para conectar a los alumnos de primaria con el patrimonio marino.',
@@ -354,8 +278,8 @@ class StorageService {
           status: 'draft',
           coverImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
           coverAlt: 'Paisaje de manglar rojo costero',
-          author: 'Licda. Nancy Matos',
-          role: 'Docente de Tecnología Digital',
+          author: 'Lic. Ramona Almonte',
+          role: 'Especialista en Didáctica',
           views: 0,
           createdAt: new Date('2025-03-15T09:00:00Z').getTime(),
           content: `
@@ -456,154 +380,22 @@ class StorageService {
         await this._putRaw('media', med);
       }
 
-    }
-
-    // Asegurar artículo de Ciencias Sociales para visitantes anteriores
-    try {
-      const has = await new Promise((res) => {
-        const r = this.db.transaction('articles', 'readonly').objectStore('articles').get('art-historia-siglo-xix');
-        r.onsuccess = () => res(!!r.result); r.onerror = () => res(true);
-      });
-      if (has) {
-        const cur = await new Promise((res) => {
-          const r = this.db.transaction('articles', 'readonly').objectStore('articles').get('art-historia-siglo-xix');
-          r.onsuccess = () => res(r.result); r.onerror = () => res(null);
-        });
-        if (cur && cur.coverImage && cur.coverImage.includes('unsplash')) {
-          cur.coverImage = 'https://lh3.googleusercontent.com/aida-public/AB6AXuAXJp_0VqUQgNOnlXlqb3X4ukXlJBd4EO1bgbvYhUKuNdPghshpdbMQTtUQ3j1rwZsRFz4Gueha8wTWICkffQXpCL39oPE7aaI2sGtEQd3YcXx8wRLkt-m_IAcP98Ai_zgNBMCpsx9-I9ixRkoIoFQIXdpYXHgIgsI8xGK7CzYyaqZ7quVNDABqY_VqkyAXf42PoxCNe_7cEuwNT2IargsPFuK26WSYq_CE7Nc0LjGQrCEgQv411qI';
-          cur.coverAlt = 'Fachada colonial dominicana iluminada por el sol de la mañana';
-          await this._putRaw('articles', cur);
-        }
-      }
-      if (!has) {
-        const SOC = [
-        {
-          id: 'art-historia-siglo-xix',
-          title: 'Explorando la historia dominicana en el siglo XIX: de la Independencia a la Restauración',
-          summary: 'Una línea de tiempo viva para comprender cómo nació y se defendió la República Dominicana entre 1844 y 1865.',
-          subject: 'Ciencias Sociales',
-          grade: '5to Primaria',
-          readTime: 8,
-          status: 'published',
-          coverImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAXJp_0VqUQgNOnlXlqb3X4ukXlJBd4EO1bgbvYhUKuNdPghshpdbMQTtUQ3j1rwZsRFz4Gueha8wTWICkffQXpCL39oPE7aaI2sGtEQd3YcXx8wRLkt-m_IAcP98Ai_zgNBMCpsx9-I9ixRkoIoFQIXdpYXHgIgsI8xGK7CzYyaqZ7quVNDABqY_VqkyAXf42PoxCNe_7cEuwNT2IargsPFuK26WSYq_CE7Nc0LjGQrCEgQv411qI',
-          coverAlt: 'Fachada colonial dominicana iluminada por el sol de la mañana',
-          author: 'Lic. Rafael Rosario',
-          role: 'Docente de Ciencias Sociales',
-          views: 1260,
-          createdAt: new Date('2025-03-12T09:00:00Z').getTime(),
-          content: `
-            <div style="background:linear-gradient(135deg,#fef3c7,#fff7ed);padding:20px 24px;border-radius:12px;margin-bottom:24px;border-left:4px solid #d97706;">
-              <p style="margin:0 0 8px;font-weight:700;color:#92400e;">📋 Ficha Curricular — Alineada al Currículo MINERD</p>
-              <p style="margin:4px 0;"><strong>Competencia fundamental:</strong> Ética y Ciudadana</p>
-              <p style="margin:4px 0;"><strong>Eje temático:</strong> Historia dominicana — Formación del Estado nacional</p>
-              <p style="margin:4px 0;"><strong>Indicador de logro:</strong> Ordena en una línea de tiempo los hechos principales de la Independencia y la Restauración, y explica su importancia para la identidad nacional.</p>
-              <p style="margin:4px 0;"><strong>Grado:</strong> 5to Primaria &nbsp;|&nbsp; <strong>Duración:</strong> 3 sesiones de 45 min</p>
-            </div>
-
-            <h2>1. ¿Por qué celebramos el 27 de febrero?</h2>
-            <p>Cada 27 de febrero las escuelas de todo el país se llenan de banderas, desfiles y actos patrios. Pero, ¿qué ocurrió realmente aquella noche de 1844 en la Puerta del Conde? Comprender el siglo XIX es entender cómo un pueblo decidió ser libre y cómo defendió esa libertad más de una vez.</p>
-            <p>Para nuestros estudiantes, la historia no debe ser una lista de fechas para memorizar, sino una historia de personas, ideas y decisiones que todavía hoy dan forma a nuestra ciudadanía.</p>
-
-            <blockquote style="border-left:4px solid #d97706;padding:16px 20px;background:#fffbeb;border-radius:0 8px 8px 0;margin:24px 0;">
-              <p style="font-style:italic;margin:0 0 8px;">«Conocer de dónde venimos nos ayuda a decidir hacia dónde queremos ir como nación.»</p>
-              <cite style="color:#64748b;">— Principio de la enseñanza de la Historia</cite>
-            </blockquote>
-
-            <h2>2. Línea de tiempo: los hechos clave</h2>
-            <ol>
-              <li><strong>1838 — La Trinitaria:</strong> Juan Pablo Duarte funda una sociedad secreta para organizar la lucha por una nación libre e independiente.</li>
-              <li><strong>27 de febrero de 1844 — Independencia:</strong> En la Puerta del Conde, Francisco del Rosario Sánchez proclama la República y Matías Ramón Mella dispara el trabucazo. Nace la República Dominicana.</li>
-              <li><strong>6 de noviembre de 1844 — Primera Constitución:</strong> Se firma en San Cristóbal la primera Carta Magna del país.</li>
-              <li><strong>1861 — Anexión a España:</strong> El gobierno de Pedro Santana entrega la soberanía del país a la Corona española.</li>
-              <li><strong>16 de agosto de 1863 — Grito de Capotillo:</strong> Comienza la Guerra de la Restauración para recuperar la independencia.</li>
-              <li><strong>1865 — Restauración de la República:</strong> Las tropas españolas abandonan el país y la soberanía queda restablecida.</li>
-            </ol>
-
-            <div style="background:#eff6ff;padding:16px 20px;border-radius:10px;margin:24px 0;border:1px solid #bfdbfe;">
-              <h4 style="margin:0 0 8px;color:#1e3a8a;">🇩🇴 ¿Sabías que...?</h4>
-              <p style="margin:0;">Duarte, Sánchez y Mella son reconocidos como los <em>Padres de la Patria</em>. Sus restos descansan juntos en el Altar de la Patria, en el Parque Independencia de Santo Domingo.</p>
-            </div>
-
-            <h2>3. Secuencia Didáctica: La Línea de Tiempo Humana</h2>
-            <p>En esta actividad los estudiantes se convierten en los protagonistas de la historia y ordenan los hechos con su propio cuerpo.</p>
-
-            <div style="background:#fff;padding:20px;border-radius:10px;border:1px solid #e2e8f0;margin:16px 0;">
-              <h4 style="color:#1e40af;margin-top:0;">🗂️ Materiales (para todo el grupo)</h4>
-              <ul>
-                <li>6 cartulinas, cada una con un hecho y su fecha</li>
-                <li>Un cordel largo y pinzas de ropa</li>
-                <li>Marcadores de colores</li>
-                <li>Imágenes impresas de los Padres de la Patria y de la Puerta del Conde</li>
-              </ul>
-              <h4 style="color:#1e40af;">👣 Pasos</h4>
-              <ol>
-                <li>Reparta las cartulinas desordenadas entre seis equipos.</li>
-                <li>Cada equipo lee su hecho y explica en una frase por qué fue importante.</li>
-                <li>Entre todos, ordenan las cartulinas en el cordel de la más antigua a la más reciente.</li>
-                <li>Cierre con la pregunta: <em>¿Qué hubiera pasado si la Restauración no hubiera triunfado?</em></li>
-              </ol>
-            </div>
-
-            <h2>4. Evaluación y reflexión</h2>
-            <ul>
-              <li>¿Qué hecho de la línea de tiempo te pareció más valiente? ¿Por qué?</li>
-              <li>Escribe tres valores que compartían Duarte, Sánchez y Mella.</li>
-              <li>¿Cómo podemos honrar hoy a la patria desde nuestra escuela y comunidad?</li>
-            </ul>
-          `,
-          tags: ['CienciasSociales', 'HistoriaDominicana', 'MINERD', 'Independencia']
-        }
-        ];
-        for (const a of SOC) await this._putRaw('articles', a);
-      }
-    } catch (e) { /* sin cambios */ }
-
-    // Migración: autoría de artículos de ejemplo
-    try {
-      const arts = await new Promise((res) => {
-        const r = this.db.transaction('articles', 'readonly').objectStore('articles').getAll();
-        r.onsuccess = () => res(r.result || []); r.onerror = () => res([]);
-      });
-      for (const a of arts) {
-        if (a.author === 'Lic. Ramona Almonte') {
-          a.author = 'Licda. Nancy Matos';
-          a.role = 'Docente de Tecnología Digital';
-          await this._putRaw('articles', a);
-        }
-      }
-    } catch (e) { /* sin cambios */ }
-
-    // Sembrar perfil docente por defecto (editable desde perfil.html)
-    // Migración: reemplaza el perfil de ejemplo anterior si nunca fue editado
-    try {
-      const prev = await new Promise((res) => {
-        const r = this.db.transaction('settings', 'readonly').objectStore('settings').get('teacherProfile');
-        r.onsuccess = () => res(r.result); r.onerror = () => res(null);
-      });
-      if (prev && prev.name === 'Lic. Ramona Almonte') {
-        await new Promise((res) => {
-          const r = this.db.transaction('settings', 'readwrite').objectStore('settings').delete('teacherProfile');
-          r.onsuccess = () => res(); r.onerror = () => res();
+      // Sembrar perfil docente por defecto (editable desde perfil.html)
+      const settingsCount = await this._countRaw('settings');
+      if (settingsCount === 0) {
+        await this._putRaw('settings', {
+          key: 'teacherProfile',
+          name: 'Lic. Ramona Almonte',
+          title: 'Lic.',
+          role: 'Especialista en Didáctica',
+          specialty: 'Educación Primaria • Mención Ciencias',
+          school: 'Distrito Educativo 10-01',
+          yearsExperience: 14,
+          bio: 'Educar con ternura y firmeza es encender una antorcha que nunca dejará de alumbrar el porvenir de nuestra patria.',
+          photoUrl: '',
+          updatedAt: Date.now()
         });
       }
-    } catch (e) { /* sin cambios */ }
-    const current = await new Promise((res) => {
-      const r = this.db.transaction('settings', 'readonly').objectStore('settings').get('teacherProfile');
-      r.onsuccess = () => res(r.result); r.onerror = () => res(null);
-    });
-    if (!current) {
-      await this._putRaw('settings', {
-        key: 'teacherProfile',
-        name: 'Nancy Matos',
-        title: 'Licda.',
-        role: 'Docente de Tecnología Digital',
-        specialty: 'Lic. en Educación, mención Informática • Tecnología Digital, 5to de Secundaria',
-        school: 'Politécnico Fray Barbino',
-        yearsExperience: 0,
-        bio: 'Educar con ternura y firmeza es encender una antorcha que nunca dejará de alumbrar el porvenir de nuestra patria.',
-        photoUrl: '',
-        updatedAt: Date.now()
-      });
     }
   }
 

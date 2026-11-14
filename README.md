@@ -19,7 +19,7 @@ Blog educativo para docentes de nivel primario y secundario en República Domini
 - HTML5 + Tailwind CSS (CDN)
 - IndexedDB para persistencia local (db.js)
 - Google Material Symbols
-- Tipografías: Montserrat (encabezados) + Source Sans 3
+- Tipografías: Literata + Source Sans 3
 
 ## Despliegue
 
